@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Space+Grotesk:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Product Sans;
+}
+a {
+  text-decoration: none;
+}
+html,
+body {
+  cursor: none;
+  height: 100%;
+  width: 100%;
+}
+.cursor{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: fixed;
+  background-color: #9c49bc;
+  background-color: #f8fffd;
+  z-index: 8;
+  transition: background-image ease 0.5s;
+  /* transition: background-image ease-in 1s; */
+  background-position: center;
+  background-size:cover ;
+  mix-blend-mode: difference;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+#navi{
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgb(174, 174, 174);
+  z-index: 999999999999;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  /* display: none; */
+}
+
+#navi:hover{
+  cursor: pointer;
+}
+
+#navi i{
+  font-size: 1.5vw;
+}
+#menubar{
+  position: fixed;
+  right: -50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 20%;
+  height: 100vh;
+  background-color: #000000;
+  z-index: 99999999999;
+  transform: rotate(0deg);
+    transition: all 1s cubic-bezier(0.54, -0.10, 0.57, 0.57);
+}
+
+#menubar a{
+  border: 1px solid white;
+  color: #fff;
+  font-family: orbitron;
+  font-size: 3vw;
+  margin-bottom: 15px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  transition: all ease 0.4s;
+}
+#menubar a:hover{
+  background-color: white;
+  color: black;
+  border-radius: 40px;
+}
+
+#close{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #080808;
+}
+
+#close:hover{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+}
+
+#close h1{
+  font-family: orbitron;
+  font-size: 1vw;
+}
+
+#main {
+  width: 100%;
+  min-height: 100vh;
+}
+.part1 {
+  background-image:linear-gradient(180deg , rgb(232, 232, 227) ,rgb(96, 94, 94));
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.navbar{
+  width: 100%;
+  padding : 0 50px;
+  /* gap: 100px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img{
+  height: 50%;
+  width: 50%;
+}
+.rightnav{
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.rightnav a{
+  font-family: cursive ;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.rightnav a:hover{
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
+}
+.content{
+  width: 100%;
+  height: 90vh;
+  /* background-color: blue; */
+  display: flex;
+}
+
+.left{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.texth{
+  width: 100%;
+}
+.left h1{
+  width: 100%;
+  font-size: 80px;
+  color: rgb(44, 43, 37);
+  font-family: orbitron;
+  letter-spacing: 10px;
+  margin-bottom: 50px;
+}
+.left p{
+  width: 60%;
+  font-size: 30px;
+  font-family: cursive;
+  margin-bottom: 30px;
+  
+}
+.left a{
+  letter-spacing: 25px;
+  font-size: 30px;
+}
+.left i{
+  align-items: center;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  /* border: 1px solid grey; */
+}
+.left i:hover{
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+}
+.right{
+  /* background-image: url(./images/[removal.ai]_9f9a1c27-56ab-4da7-ac94-c1957555eaab-javier-miranda-mig0gl63lfk-unsplash.png); */
+  background-repeat: no-repeat;
+  width: 20%;
+  /* background-color: red; */
+}
+.right img{
+  width: 100%;
+  height: 100%;
+  mix-blend-mode :darken;
+}
+
+
+
+/* part-2 css */
+.part-2{
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+}
+.strip{
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+  height: 30vh;
+  width: 500%;
+  background-color: black
+}
+.strip>h1{
+  color: white;
+  /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 5s; */
+  font-size: 3.5vw;
+  animation-name: anim;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes anim{
+  0%{
+      transform: translateX(0%);
+  }
+  100%{
+      transform: translateX(-100%);
+  }
+}
+.img-part-2 {
+  width: 100%;
+  height: 90vh;
+  background-image: url(https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+}
+.text-part-2 {
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+  height: 100vh;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.5s;
+  background-image: url(./images/port\ mission.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/* part-3 css */
+.part-3 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(180deg, white, rgb(255, 219, 219));
+  overflow: hidden;
+}
+.top-part-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 50vh;
+}
+.our-work {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vh;
+}
+.our-work h1 {
+  font-family: gloria hallelujah;
+  font-size: 2.6vw;
+  font-weight: 200;
+}
+.line-work {
+  width: 1px;
+  height: 40vh;
+  background-color: #ff0000;
+}
+.our-work p {
+  font-family: Space Grotesk;
+  font-size: 1.3vw;
+  font-weight: 100;
+  text-align: center;
+}
+.line-hor-work {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.line-hor-work .line-1 {
+  width: 40%;
+  height: 1px;
+  background-color: #333;
+}
+.line-hor-work .line-2 {
+  width: 40%;
+  height: 1px;
+  background-color: #333;
+}
+.cntr-cir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2vw;
+  height: 2vw;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+.cntr-cir h1 {
+  font-family: dotgothic16;
+  font-size: 5vw;
+  letter-spacing: 10px;
+  opacity: 0;
+  color: #fff;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+
+
+/* part-4 css */
+.part-4{
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+.one{
+  width: 100%;
+  height: 70vh;
+  background-color: black;
+  color: white;
+}
+.sText{
+  overflow: hidden;
+  height: 150px;
+  width: 100%;
+  position: relative;
+  border-top: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(236, 216, 216);
+  left: 0;
+  top: -100%;
+  transition: all ease 0.5s;
+}
+.sText:hover .overlay{
+  top:0;
+
+}
+.sText a{
+  color: white;
+  font-family:orbitron;
+  font-size: 3vw;
+  font-weight: 400;
+  z-index: 10;
+}
+.sText:hover a{
+  color: black;
+}
+.sText p{
+  font-family: Space Grotesk;
+  font-size: 1.4vw;
+  font-weight: 400;
+  position: relative;
+  z-index: 10;
+}
+.sText:hover p{
+  color: black;
+}
+#shown{
+  display: flex;
+  justify-content: center;
+}
+#btnsm{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 13vw;
+  height: 5vw;
+  border: 1px solid white;
+  border-radius: 50px;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+  cursor: none;
+}
+#fixed-img{
+  height: 25vw;
+  width: 18vw;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 999;
+  left: 40%;
+  top: 27%;
+  background-size:cover ;
+  background-position: center;
+  display: none;
+}
+#btnsm h1{
+  font-size: 1.5vw;
+  color: rgb(165, 165, 165);
+}
+
+/* part -5 css */
+.part-5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+  }
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: "<percentage>";
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: true;
+  }
+  
+  :root {
+    --d: 2500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50%;
+    --c1: rgb(255, 255, 255);
+    --c2: rgba(168, 239, 255, 0.1);
+  }
+  .connect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vh;
+    width: 90%;
+    height: 80vh;
+    border-radius: 50px;
+    border: 0.35rem solid;
+    border-image: conic-gradient(
+        from var(--angle),
+        var(--c2),
+        var(--c1) 0.1turn,
+        var(--c1) 0.15turn,
+        var(--c2) 0.25turn
+      )
+      30;
+    animation: borderRotate 4s linear infinite forwards;
+  }
+  @keyframes borderRotate {
+    100% {
+      --angle: 420deg;
+    }
+  }
+  .connect h4 {
+    font-size: 1.5vw;
+    font-weight: 400;
+  }
+  
+  .connect h1 {
+    font-family: orbitron;
+    font-size: 5vw;
+    font-weight: 400;
+  }
+  
+  .wam {
+    display: flex;
+    font-size: 1vw;
+    align-items: center;
+    justify-content: center;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  }
+  
+  .wam:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: none;
+  }
+  
+  .wam a {
+    color: #868686;
+  }
+
+
+  #text-container {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    outline: 2px solid var(--border);
+    outline-offset: -50px;
+    border-radius: 50%;
+    animation: text-rotate 5s linear infinite;
+  }
+  
+  .text-character {
+    position: absolute;
+    left: 50%;
+    color: var(--color);
+    text-transform: uppercase;
+    transform-origin: 0 125px;
+  }
+  
+  @keyframes text-rotate {
+    to {
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+  }
+
+
+
+
+  @media screen and (max-width: 502px) {
+    .navbar{
+      padding: 0%;
+    }
+    .rightnav{
+      gap:20px;
+    }
+    .logo{
+      width: 100%;
+      margin-top: 5vw;
+    }
+    .logo img{
+      width: 80%;
+      height: 80%;
+    }
+    .texth h1{
+      margin-top: 20vw;
+      font-size: 13vw;
+    }
+    .texth p{
+      font-size: 5vw;
+      width: 100% ;
+    }
+    .text-part-2{
+      background-size: contain;
+      /* background-repeat: no-repeat; */
+    }
+  }
